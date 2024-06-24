@@ -1,4 +1,1 @@
-print("hello world")
-print("teste")
-
-# teste aaa
+from cliente import Cliente
