@@ -1,7 +1,8 @@
 import re
 class Produto:
-    def __init__(self,id,nome,valor):
+    def __init__(self,tipo, id,nome,valor):
         self.id = id
+        self.tipo = tipo
         self.nome = nome
         self.valor = valor
     def __repr__(self):
@@ -14,11 +15,11 @@ def lista_produtos():
         lines = file.readlines()
     for line in lines:
         if line.startswith('Produto: '):
-            produto = line.strip().split('Produto: ')[1]
-            id = produto.split(':')[1].split(',')[0]
-            nome = produto.split(',')[1]
-            valor = produto.split(',')[2]
-            produto = Produto(id, nome, valor)
+            base = line.strip().split('Produto: ')[1]
+            tipo = base.split(':')[0]
+            id = base.split(':')[1].split(',')[0]
+            nome = base.split(',')[1]
+            valor = base.split(',')[2]
+            produto = Produto(tipo, id, nome, valor)
             list_p.append(produto)
     return list_p
-
