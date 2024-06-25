@@ -1,0 +1,24 @@
+Produto: hamburguer:1,Quarteirao,25
+Produto: hamburguer:2,Chicken,25
+Produto: hamburguer:3,Bacon Crispy,25
+Produto: hamburguer:4,Colosso,25
+Produto: hamburguer:5,Tasty,25
+Produto: hamburguer:6,Duplo Cheddar,25
+Produto: hamburguer:7,Whopper,25
+Produto: hamburguer:8,Churrasco,25
+ 
+Produto: acompanhamento:1,batata frita,8
+Produto: acompanhamento:2,batata frita,8
+Produto: acompanhamento:3,batata frita,8
+Produto: acompanhamento:4,batata frita,8
+ 
+Produto: bebida:1,coca cola (lata),5
+Produto: bebida:2,coca cola (lata),5
+Produto: bebida:3,coca cola (lata),5
+Produto: bebida:4,coca cola (lata),5
+ 
+Produto: sobremesa:1,sorvete de baunilha,5
+Produto: sobremesa:2,sorvete de baunilha,5
+Produto: sobremesa:3,sorvete de baunilha,5
+Produto: sobremesa:4,sorvete de baunilha,5
+
