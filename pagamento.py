@@ -1,7 +1,7 @@
 #formas de pagamento: credito, debito, pix, dinheiro
 import random
 
-def forma_pagamento():
+def forma_pagamento(pedido):
     forma_pag = input('Qual a forma de pagamento?\n1. Cartão \n2. Dinheiro \n3. pix\n4. Cancelar pedido\n opção:')
     if forma_pag == '1':
         print(" cartão. pagamento Confirmado")
@@ -18,3 +18,4 @@ def forma_pagamento():
         print("Opção inválida.")
 #pagamento finalizado, gera um numero de pedido, COMO gerar esse número??
 pedido = random.randrange(0,1000)
+forma_pagamento(pedido)
