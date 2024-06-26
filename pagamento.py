@@ -1,4 +1,4 @@
-#formas de pagamento: credito, debito, pix, dinheiro
+#formas de pagamento: cartão, pix, dinheiro
 import random
 
 def forma_pagamento(n_pedido):
@@ -8,7 +8,7 @@ def forma_pagamento(n_pedido):
         print('seu pedido é nº: ', n_pedido)
     elif forma_pag == '2':
         print("Dinheiro. Pague no local.")
-        print('pedido será gerado após o pagamento')
+        print('Número do pedido será gerado após o pagamento')
     elif forma_pag == '3':
         print('Pix. chave pix:2a1sd6a51sd6a1sd6a51s6da1s\n processando...\n Pagamento confirmado')
         print('seu pedido é nº:', n_pedido)
