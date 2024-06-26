@@ -26,7 +26,8 @@ def pedido():
         print("[1] Adicionar mais um item"),zzz()
         print("[2] Verificar carrinho"),zzz()
         print("[3] Finalizar pedido.")
-        x = input()
+        x = input(),zzz()
+        clear_console()
         match x:
             case "1":
                 pass
@@ -60,7 +61,7 @@ def main():
         elif opcao == '2':
             pass
         elif opcao == '3':
-            typing("Tenha um bom dia"),time.sleep(2)
+            typing("Tenha um bom dia"),time.sleep(1)
             exit()
         else:
             print("Opção inválida.")

@@ -1,11 +1,11 @@
-Produto: hamburguer:1,Quarteirao,25
-Produto: hamburguer:2,Chicken,25
-Produto: hamburguer:3,Bacon Crispy,25
-Produto: hamburguer:4,Colosso,25
-Produto: hamburguer:5,Tasty,25
-Produto: hamburguer:6,Duplo Cheddar,25
-Produto: hamburguer:7,Whopper,25
-Produto: hamburguer:8,Churrasco,25
+Produto: hamburguer:1,Quarteirao com Queijo,29
+Produto: hamburguer:2,Chicken,26.50
+Produto: hamburguer:3,Chicken Bacon,27
+Produto: hamburguer:4,Cheddar Melt,29
+Produto: hamburguer:5,Big Tasty,38
+Produto: hamburguer:6,Big Tasty Turbo Queijo,42
+Produto: hamburguer:7,Duplo Cheddar,37
+Produto: hamburguer:8,Brabo Bacon Salad,44
  
 Produto: acompanhamento:1,batata frita,8
 Produto: acompanhamento:2,nuggets,8
