@@ -1,7 +1,7 @@
 import time,os
 from cardapio import *
 from formatação import *
-
+from pagamento import *
 def pedido():
     while True:
         typing("Selecione o que gostaria de comprar")
@@ -34,7 +34,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
-                exit()
+                forma_pagamento()
             case _:
                 typing("Invalido, reiniciando"),zzz()
 
