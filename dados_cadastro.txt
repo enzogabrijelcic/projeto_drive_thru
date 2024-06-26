@@ -4,3 +4,4 @@ Nome: juca, CPF: 302.599.270-07, Senha: 9876
 Nome: ze, CPF: 646.436.940-76, Senha: 1234
 Nome: marcio, CPF: 233.402.170-92, Senha: 2182
 
+Nome: diego, CPF: 12345678900, Senha: 1987

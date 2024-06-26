@@ -2,20 +2,20 @@ import time,os
 from formatação import *
 from produtos import *
 pagamento = 0 # conta a pagar no final 
+carrinho = []
 
 def atendimento(tipo):
     global pagamento, carrinho
-    carrinho = []
     typing("\nSelecione o codigo do produto que deseja adicionar ao carrinho")
     x = input("\n")
     verificar_produto(x)
     for produto_v in lista_produtos():
         if produto_v.id == x and produto_v.tipo == tipo:
             pagamento += int(produto_v.valor)
-            carrinho.append(f'{produto_v.nome}, - R${produto_v.valor}')
+            carrinho.append(f'{produto_v.nome} - R${produto_v.valor}')
             typing(f'{produto_v.nome} adicionado ao carrinho')
             typing(f"Conta atual: R${pagamento}\n")
-            time.sleep(2)
+            time.sleep(1)
             break
     return pagamento
 
@@ -55,7 +55,9 @@ def sobremesas():
     atendimento("sobremesa")
 
 def verificar_carrinho():
-    print(carrinho)
+    for i in carrinho:
+        print(i)
+    print(f"Total: R${pagamento}")
 
 def combos():
     pass

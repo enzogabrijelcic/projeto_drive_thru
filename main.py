@@ -1,6 +1,7 @@
 import time,os
 from cardapio import *
 from formatação import *
+from pagamento import Pagamento
 from cadastro import Cadastro 
 import login
 cadastro1 = Cadastro('marcio', '658989', '1234')
@@ -33,14 +34,15 @@ def pedido():
         print("[1] Adicionar mais um item"),zzz()
         print("[2] Verificar carrinho"),zzz()
         print("[3] Finalizar pedido.")
-        x = input()
+        x = input(),zzz()
+        clear_console()
         match x:
             case "1":
                 pass
             case "2":
                 verificar_carrinho()
             case "3":
-                exit()
+                forma_pagamento(n_pedido)
             case _:
                 typing("Invalido, reiniciando"),zzz()
 
@@ -80,7 +82,7 @@ def main():
                     
 
         elif opcao == '3':
-            typing("Tenha um bom dia"),time.sleep(2)
+            typing("Tenha um bom dia"),time.sleep(1)
             exit()
 
         
