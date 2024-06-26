@@ -24,3 +24,10 @@ Produto: sobremesa:2,Sundae,5
 Produto: sobremesa:3,Tortinha,5
 Produto: sobremesa:4,Shake,5
 
+Produto: combo:1,Quarteirao com Queijo,38
+Produto: combo:2,Chicken,40,60
+Produto: combo:3,Chicken Bacon,47
+Produto: combo:4,Cheddar Melt,38
+Produto: combo:5,Big Tasty,53
+Produto: combo:6,Big Tasty Turbo Queijo,51
+Produto: combo:7,Duplo Cheddar,52
