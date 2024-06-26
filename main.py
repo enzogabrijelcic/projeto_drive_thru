@@ -2,12 +2,9 @@ import random
 import time,os
 from cardapio import *
 from formatação import *
-<<<<<<< HEAD
 from pagamento import *
-=======
 from pagamento import forma_pagamento
->>>>>>> 0438b3272077468866156396cad03542bb5e8a9d
-from cadastro import Cadastro 
+from cadastro import Cadastro
 import login
 cadastro1 = Cadastro('marcio', '658989', '1234')
 cadastro2 = Cadastro('ze', '989', 'abc')
