@@ -1,5 +1,5 @@
 #formas de pagamento: cartão, pix, dinheiro
-def forma_pagamento(n_pedido):
+def forma_pagamento():
     forma_pag = input('Qual a forma de pagamento?\n1. Cartão \n2. Dinheiro \n3. pix\n4. Cancelar pedido\n opção:')
     if forma_pag == '1':
         print(" cartão. pagamento Confirmado")
@@ -15,4 +15,4 @@ def forma_pagamento(n_pedido):
     else:
         print("Opção inválida.")
 #pagamento finalizado, gera um numero de pedido, COMO gerar esse número??
-
+forma_pagamento()

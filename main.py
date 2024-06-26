@@ -1,4 +1,3 @@
-import random
 import time,os
 from cardapio import *
 from formatação import *
@@ -46,8 +45,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
-                n_pedido = random.randrange(0,1000)
-                forma_pagamento(n_pedido)
+                forma_pagamento()
             case _:
                 typing("Invalido, reiniciando"),zzz()
 
