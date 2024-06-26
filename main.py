@@ -1,6 +1,13 @@
 import time,os
 from cardapio import *
 from formatação import *
+from cadastro import Cadastro 
+import login
+cadastro1 = Cadastro('marcio', '658989', '1234')
+cadastro2 = Cadastro('ze', '989', 'abc')
+list_cadastro = [cadastro1,cadastro2]
+
+
 
 def pedido():
     while True:
@@ -52,17 +59,31 @@ def main():
         print("[1] Fazer Pedido."),zzz()
         print("[2] Checar Cadastro."),zzz()
         print("[3] Sair")
+
         opcao = input("\n")
         zzz()
         clear_console()
         if opcao == '1':
             pedido()
         elif opcao == '2':
-            pass
+            escolha = input('Voce possui Cadastro? [1] Sim [2] Não    ')
+
+            match escolha:
+                case '1':
+                    print('Voce selecionou efetuar Login')
+                    cpf = input('digite o cpf:     ')
+                    senha = input('digite a senha:   ')
+                    login.login_lista_cadastro(list_cadastro, cpf, senha)
+
+                case '2':
+                    print('Voce selecionou efetuar Cadastro')    
+                    
+
         elif opcao == '3':
             typing("Tenha um bom dia"),time.sleep(2)
             exit()
-        else:
-            print("Opção inválida.")
-            clear_console()
+
+        
+
+        
 main()
