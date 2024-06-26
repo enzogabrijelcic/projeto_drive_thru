@@ -1,4 +1,5 @@
 from cadastro import Cadastro
+
 def login_obj (cadastro:Cadastro):
     cpf = input('digite o cpf ')
     senha = input('digite a senha')
@@ -20,5 +21,7 @@ def login_lista_cadastro(list:list[Cadastro]):
         print('Login incorreto')
         return False
         
+
+
 
     
