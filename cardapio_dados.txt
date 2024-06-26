@@ -8,17 +8,19 @@ Produto: hamburguer:7,Whopper,25
 Produto: hamburguer:8,Churrasco,25
  
 Produto: acompanhamento:1,batata frita,8
-Produto: acompanhamento:2,batata frita,8
-Produto: acompanhamento:3,batata frita,8
-Produto: acompanhamento:4,batata frita,8
+Produto: acompanhamento:2,nuggets,8
+Produto: acompanhamento:3,batata rustica,8
+Produto: acompanhamento:4,batata frita cheddar & bacon,8
  
 Produto: bebida:1,coca cola (lata),5
-Produto: bebida:2,coca cola (lata),5
-Produto: bebida:3,coca cola (lata),5
-Produto: bebida:4,coca cola (lata),5
- 
-Produto: sobremesa:1,sorvete de baunilha,5
-Produto: sobremesa:2,sorvete de baunilha,5
-Produto: sobremesa:3,sorvete de baunilha,5
-Produto: sobremesa:4,sorvete de baunilha,5
+Produto: bebida:2,fruki (lata),5
+Produto: bebida:3,fanta (lata),5
+Produto: bebida:4,agua (500ml),5
+Produto: bebida:4,agua com gás (500ml),5
+
+
+Produto: sobremesa:1,Casquinha de Sorvete,5
+Produto: sobremesa:2,Sundae,5
+Produto: sobremesa:3,Tortinha,5
+Produto: sobremesa:4,Shake,5
 

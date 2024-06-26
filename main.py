@@ -24,12 +24,15 @@ def pedido():
             case _:
                 print("Invalido"),time.sleep(2)
         print("[1] Adicionar mais um item"),zzz()
-        print("[2] Finalizar pedido.")
+        print("[2] Verificar carrinho"),zzz()
+        print("[3] Finalizar pedido.")
         x = input()
         match x:
             case "1":
                 pass
             case "2":
+                verificar_carrinho()
+            case "3":
                 exit()
             case _:
                 typing("Invalido, reiniciando"),zzz()
