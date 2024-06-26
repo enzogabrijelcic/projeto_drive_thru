@@ -33,7 +33,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
-                forma_pagamento()
+                forma_pagamento(n_pedido)
             case _:
                 typing("Invalido, reiniciando"),zzz()
 
