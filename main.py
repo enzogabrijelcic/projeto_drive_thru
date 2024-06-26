@@ -1,7 +1,8 @@
+import random
 import time,os
 from cardapio import *
 from formatação import *
-from pagamento import Pagamento
+from pagamento import forma_pagamento
 from cadastro import Cadastro 
 import login
 cadastro1 = Cadastro('marcio', '658989', '1234')
@@ -45,6 +46,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
+                n_pedido = random.randrange(0,1000)
                 forma_pagamento(n_pedido)
             case _:
                 typing("Invalido, reiniciando"),zzz()
