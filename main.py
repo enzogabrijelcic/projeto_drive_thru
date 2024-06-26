@@ -4,9 +4,10 @@ from formatação import *
 from pagamento import Pagamento
 from cadastro import Cadastro 
 import login
-cadastro1 = Cadastro('marcio', '658989', '1234')
-cadastro2 = Cadastro('ze', '989', 'abc')
-list_cadastro = [cadastro1,cadastro2]
+import novo_cadastro
+#cadastro1 = Cadastro('marcio', '658989', '1234')
+#cadastro2 = Cadastro('ze', '989', 'abc')
+list_cadastro = [novo_cadastro]
 
 
 
@@ -68,13 +69,13 @@ def main():
         if opcao == '1':
             pedido()
         elif opcao == '2':
-            escolha = input('Voce possui Cadastro? [1] Sim [2] Não    ')
+            escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
 
             match escolha:
                 case '1':
                     print('Voce selecionou efetuar Login')
-                    cpf = input('digite o cpf:     ')
-                    senha = input('digite a senha:   ')
+                    cpf = input('digite o cpf:\n')
+                    senha = input('digite a senha:\n')
                     login.login_lista_cadastro(list_cadastro, cpf, senha)
 
                 case '2':
