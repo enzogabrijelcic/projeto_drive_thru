@@ -6,4 +6,4 @@ class Cadastro:
     def __repr__(self):
         return f'{self.nome}\n {self.cpf}\n, {self.senha}'
     
-    
+       
