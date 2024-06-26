@@ -7,22 +7,22 @@ Produto: hamburguer:6,Big Tasty Turbo Queijo,42
 Produto: hamburguer:7,Duplo Cheddar,37
 Produto: hamburguer:8,Brabo Bacon Salad,44
  
-Produto: acompanhamento:1,batata frita,8
-Produto: acompanhamento:2,nuggets,8
-Produto: acompanhamento:3,batata rustica,8
-Produto: acompanhamento:4,batata frita cheddar & bacon,8
+Produto: acompanhamento:1,Batata Frita,13.50
+Produto: acompanhamento:2,4 Nuggets,11.50
+Produto: acompanhamento:3,10 Nuggets,25.50
+Produto: acompanhamento:4,Batata Frita Cheddar & Bacon,17.50
  
-Produto: bebida:1,coca cola (lata),5
-Produto: bebida:2,fruki (lata),5
-Produto: bebida:3,fanta (lata),5
-Produto: bebida:4,agua (500ml),5
-Produto: bebida:4,agua com gás (500ml),5
+Produto: bebida:1,Coca Cola (500ml),12.90
+Produto: bebida:2,Suco (500ml),12.90
+Produto: bebida:3,Fanta (500ml),12.90
+Produto: bebida:4,Agua (500ml),12.90
+Produto: bebida:4,Agua com Gas (500ml),12.90
 
 
-Produto: sobremesa:1,Casquinha de Sorvete,5
-Produto: sobremesa:2,Sundae,5
-Produto: sobremesa:3,Tortinha,5
-Produto: sobremesa:4,Shake,5
+Produto: sobremesa:1,Top Sundae,14.50
+Produto: sobremesa:2,Sundae,11.50
+Produto: sobremesa:3,Tortinha de Maça,11
+Produto: sobremesa:4,Danoninho,6
 
 Produto: combo:1,Quarteirao com Queijo,38
 Produto: combo:2,Chicken,40,60

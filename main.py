@@ -1,7 +1,7 @@
 import time,os
 from cardapio import *
 from formatação import *
-from pagamento import Pagamento
+from pagamento import *
 from cadastro import Cadastro 
 import login
 cadastro1 = Cadastro('marcio', '658989', '1234')
