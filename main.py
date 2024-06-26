@@ -8,8 +8,9 @@ def pedido():
         print("\n[1] Hamburguer."),zzz()
         print("[2] Acompanhamento."),zzz()
         print("[3] Bebidas."),zzz()
-        print("[4] Sobremesas.")
-        x = input("\n")
+        print("[4] Sobremesas."),zzz()
+        print("[5] Combos")
+        x = input("")
         zzz()
         clear_console()
         match x:
@@ -21,6 +22,8 @@ def pedido():
                 bebidas()
             case "4":
                 sobremesas()
+            case "5":
+                combos()
             case _:
                 print("Invalido"),time.sleep(2)
         print("[1] Adicionar mais um item"),zzz()
