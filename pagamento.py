@@ -18,3 +18,4 @@ def forma_pagamento(n_pedido):
         print("Opção inválida.")
 #pagamento finalizado, gera um numero de pedido, COMO gerar esse número??
 n_pedido = random.randrange(0,1000)
+forma_pagamento(n_pedido)
