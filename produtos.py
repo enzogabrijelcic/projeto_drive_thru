@@ -11,7 +11,7 @@ class Produto:
 @staticmethod
 def lista_produtos():
     list_p = []
-    with open('cardapio_dados.txt', 'r') as file:
+    with open('C:/users/Felipe Klitzke/Desktop/VsCode/python/drive thru/projeto_drive_thru/cardapio_dados.txt', 'r') as file:
         lines = file.readlines()
     for line in lines:
         if line.startswith('Produto: '):

@@ -1,10 +1,21 @@
 import time,os
+from formatação import *
 from produtos import *
 pagamento = 0 # conta a pagar no final 
 
-def clear_console():
-    if os.name == 'nt':
-        _ = os.system('cls')
+def atendimento():
+    global pagamento
+    typing("\nSelecione o codigo do produto que deseja adicionar ao carrinho")
+    x = input("\n")
+    verificar_produto(x)
+    for produto_v in lista_produtos():
+        if produto_v.id == x:
+            pagamento += int(produto_v.valor) 
+            typing(f'{produto_v.nome} adicionado ao carrinho')
+            typing(f"Conta atual: R${pagamento}\n")
+            time.sleep(2)
+            break
+    return pagamento 
 
 def verificar_produto(x):
     aux = False
@@ -18,44 +29,28 @@ def verificar_produto(x):
         print("produto não encontrado")
 
 def hamburguers():
-    global pagamento
     for produto in lista_produtos():
         if produto.tipo == "hamburguer":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")
-    x = input("Selecione o codigo do produto que deseja adicionar ao carrinho\n")
-    verificar_produto(x)
-    for produto_v in lista_produtos():
-        if produto_v.id == x:
-            pagamento =+ int(produto.valor) 
-            print(produto_v.nome,"adicionado ao carrinho")
-            break
-        
-
-    return pagamento
+    atendimento()
 
 def acompanhamentos():
-    global pagamento
     for produto in lista_produtos():
         if produto.tipo == "acompanhamento":
-            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
-    return pagamento
+            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")
+    atendimento()
 
 def bebidas():
     for produto in lista_produtos():
         if produto.tipo == "bebida":
-            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
-    global pagamento 
-    pass
+            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")   
+    atendimento()  
 
-def sobremesas():
-    global pagamento 
+def sobremesas(): 
     for produto in lista_produtos():
         if produto.tipo == "sobremesa":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
-    pass
+    atendimento()
 
 def combos():
     pass
-
-hamburguers()
-print("valor a pagar:",pagamento)
