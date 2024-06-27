@@ -1,6 +1,5 @@
 from cardapio import pagamento
 from numero_pedido_sequencial import *
-pagamento = 0
 n_pedido = gerar_numero_pedido()
 
 def forma_pagamento():

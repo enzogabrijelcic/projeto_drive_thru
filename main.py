@@ -4,8 +4,6 @@ from cardapio import *
 from formatação import *
 from forma_pagamento import *
 from cadastro import Cadastro
-from pagamento import *
-from cadastro import Cadastro
 import login
 import novo_cadastro
 #cadastro1 = Cadastro('marcio', '658989', '1234')
@@ -55,9 +53,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
-                forma_pagamento()
-                n_pedido = random.randrange(0,1000)
-                forma_pagamento(n_pedido)
+                forma_pagamento()               
                 exit()
             case _:
                 typing("Invalido, reiniciando"),zzz()
