@@ -8,7 +8,6 @@ import login
 
 #cadastro1 = Cadastro('marcio', '658989', '1234')
 #cadastro2 = Cadastro('ze', '989', 'abc')
-list_cadastro = [novo_cadastro]
 
 
 
