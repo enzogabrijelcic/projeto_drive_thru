@@ -11,7 +11,7 @@ def atendimento(tipo):
     verificar_produto(x)
     for produto_v in lista_produtos():
         if produto_v.id == x and produto_v.tipo == tipo:
-            pagamento += int(produto_v.valor)
+            pagamento += float(produto_v.valor)
             carrinho.append(f'{produto_v.nome} - R${produto_v.valor}')
             typing(f'{produto_v.nome} adicionado ao carrinho')
             typing(f"Conta atual: R${pagamento}\n")
@@ -55,16 +55,13 @@ def sobremesas():
     atendimento("sobremesa")
 
 def combos(): 
+    print("\nTodos os Combos acompanham fritas e bebida")
     for produto in lista_produtos():
         if produto.tipo == "combo":
-            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")   
-            print("\nTodos os Combos acompanham fritas e bebida") 
+            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
     atendimento("combo")
 
 def verificar_carrinho():
     for i in carrinho:
         print(i)
     print(f"Total: R${pagamento}")
-
-def combos():
-    pass
