@@ -7,4 +7,3 @@ def novo_cadastro():
     novo = Cadastro(x,y,z)
     with open('dados_cadastro.txt', 'a') as file:
         file.write(f'Nome: {novo.nome}, CPF: {novo.cpf}, Senha: {novo.senha}\n')
-novo_cadastro()
