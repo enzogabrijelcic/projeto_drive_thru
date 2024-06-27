@@ -1,9 +1,7 @@
-import random
-import time,os
+import random, time, os
 from cardapio import *
 from formatação import *
 from pagamento import *
-from pagamento import forma_pagamento
 from cadastro import Cadastro
 import login
 import novo_cadastro
@@ -37,10 +35,12 @@ def pedido():
                 combos()
             case _:
                 print("Invalido"),time.sleep(2)
+                pedido()
         print("[1] Adicionar mais um item"),zzz()
         print("[2] Verificar carrinho"),zzz()
         print("[3] Finalizar pedido.")
-        x = input(),zzz()
+        x = input()
+        zzz()
         clear_console()
         match x:
             case "1":
@@ -50,6 +50,7 @@ def pedido():
             case "3":
                 n_pedido = random.randrange(0,1000)
                 forma_pagamento(n_pedido)
+                exit()
             case _:
                 typing("Invalido, reiniciando"),zzz()
 
