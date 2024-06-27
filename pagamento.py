@@ -31,4 +31,3 @@ def forma_pagamento(n_pedido):
         forma_pagamento()
 #pagamento finalizado, gera um numero de pedido, COMO gerar esse número??
 n_pedido = random.randrange(0,1000)
-forma_pagamento()
