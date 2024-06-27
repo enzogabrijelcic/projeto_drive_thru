@@ -1,17 +1,16 @@
 from cadastro import Cadastro
 
-def login_obj (cadastro:Cadastro):
-    cpf = input('digite o cpf ')
-    senha = input('digite a senha')
-    if cpf == cadastro.nome and senha == cadastro.senha:
+def login_obj (cadastro:Cadastro,cpf, senha):
+   
+    if cpf == cadastro.cpf and senha == cadastro.senha:
         return True
     else:
         return False
-def login_lista_cadastro(list:list[Cadastro]):
+def login_lista_cadastro(list:list[Cadastro],cpf, senha):
     #varrer a lista de cadastro
     passou = False
     for cadastro in list:
-        if login_obj (cadastro):
+        if login_obj (cadastro, cpf, senha):
             passou = True
 
     if passou == True:

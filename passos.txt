@@ -1,0 +1,2 @@
+1 - interação pra todos os itens serem jogados para uma list
+2 - fazer um case q verifica se aquele item ta na lista
