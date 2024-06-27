@@ -1,8 +1,7 @@
 import time,os
 from cardapio import *
 from formatação import *
-from pagamento import *
-from pagamento import forma_pagamento
+from forma_pagamento import *
 from cadastro import Cadastro
 import login
 import novo_cadastro
