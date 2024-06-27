@@ -55,16 +55,13 @@ def sobremesas():
     atendimento("sobremesa")
 
 def combos(): 
+    print("\nTodos os Combos acompanham fritas e bebida")
     for produto in lista_produtos():
         if produto.tipo == "combo":
-            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")   
-            print("\nTodos os Combos acompanham fritas e bebida") 
+            print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
     atendimento("combo")
 
 def verificar_carrinho():
     for i in carrinho:
         print(i)
     print(f"Total: R${pagamento}")
-
-def combos():
-    pass
