@@ -5,17 +5,11 @@ from formatação import *
 from forma_pagamento import *
 from cadastro import Cadastro
 from pagamento import *
-from cadastro import Cadastro
 import login
 import novo_cadastro
 #cadastro1 = Cadastro('marcio', '658989', '1234')
 #cadastro2 = Cadastro('ze', '989', 'abc')
 list_cadastro = [novo_cadastro]
-import novo_cadastro
-#cadastro1 = Cadastro('marcio', '658989', '1234')
-#cadastro2 = Cadastro('ze', '989', 'abc')
-list_cadastro = [novo_cadastro]
-
 
 
 def pedido():
@@ -64,10 +58,6 @@ def pedido():
 
 def main():
     
-    #if not login(usuarios):
-    #    print("Usuário ou senha incorretos.")
-    #    main()
-    
     typing("Login realizado com sucesso!"),time.sleep(1)
     typing("Carregando..."),time.sleep(2)
     clear_console()
@@ -103,8 +93,5 @@ def main():
         elif opcao == '3':
             typing("Tenha um bom dia"),time.sleep(1)
             exit()
-
-        
-
         
 main()
