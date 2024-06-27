@@ -1,9 +1,16 @@
 import time,os
+import random, time, os
 from cardapio import *
 from formatação import *
 from forma_pagamento import *
 from cadastro import Cadastro
+from pagamento import *
+from cadastro import Cadastro
 import login
+import novo_cadastro
+#cadastro1 = Cadastro('marcio', '658989', '1234')
+#cadastro2 = Cadastro('ze', '989', 'abc')
+list_cadastro = [novo_cadastro]
 import novo_cadastro
 #cadastro1 = Cadastro('marcio', '658989', '1234')
 #cadastro2 = Cadastro('ze', '989', 'abc')
@@ -35,10 +42,12 @@ def pedido():
                 combos()
             case _:
                 print("Invalido"),time.sleep(2)
+                pedido()
         print("[1] Adicionar mais um item"),zzz()
         print("[2] Verificar carrinho"),zzz()
         print("[3] Finalizar pedido.")
-        x = input(),zzz()
+        x = input()
+        zzz()
         clear_console()
         match x:
             case "1":
@@ -47,6 +56,9 @@ def pedido():
                 verificar_carrinho()
             case "3":
                 forma_pagamento()
+                n_pedido = random.randrange(0,1000)
+                forma_pagamento(n_pedido)
+                exit()
             case _:
                 typing("Invalido, reiniciando"),zzz()
 
@@ -73,10 +85,13 @@ def main():
             pedido()
         elif opcao == '2':
             escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
+            escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
 
             match escolha:
                 case '1':
                     print('Voce selecionou efetuar Login')
+                    cpf = input('digite o cpf:\n')
+                    senha = input('digite a senha:\n')
                     cpf = input('digite o cpf:\n')
                     senha = input('digite a senha:\n')
                     login.login_lista_cadastro(list_cadastro, cpf, senha)

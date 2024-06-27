@@ -21,7 +21,7 @@ Produto: bebida:4,Agua com Gas (500ml),12.90
 
 Produto: sobremesa:1,Top Sundae,14.50
 Produto: sobremesa:2,Sundae,11.50
-Produto: sobremesa:3,Tortinha de Maça,11
+Produto: sobremesa:3,Tortinha de Maca,11
 Produto: sobremesa:4,Danoninho,6
 
 Produto: combo:1,Quarteirao com Queijo,38
