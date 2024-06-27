@@ -1,0 +1,4 @@
+
+
+Nome: ze, CPF: 12345, Senha: abc
+Nome: & C:/Users/182400136/AppData/Local/Programs/Python/Python312/python.exe c:/Users/182400136/Desktop/Atividades/projeto_em_grupo/novo/projeto_drive_thru/main.py, CPF: & C:/Users/182400136/AppData/Local/Programs/Python/Python312/python.exe c:/Users/182400136/Desktop/Atividades/projeto_em_grupo/novo/projeto_drive_thru/main.py, Senha: & C:/Users/182400136/AppData/Local/Programs/Python/Python312/python.exe c:/Users/182400136/Desktop/Atividades/projeto_em_grupo/novo/projeto_drive_thru/main.py
