@@ -1,7 +1,8 @@
+import time,os
 import random, time, os
 from cardapio import *
 from formatação import *
-from pagamento import *
+from forma_pagamento import *
 from usuario import Usuario
 import login
 
@@ -80,6 +81,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
+                forma_pagamento()
                 n_pedido = random.randrange(0,1000)
                 forma_pagamento(n_pedido)
                 exit()
@@ -110,11 +112,11 @@ def main():
             pedido()
         elif opcao == '2':
             escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
+            escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
 
             match escolha:
                 case '1':
                     print('Voce selecionou efetuar Login')
-                    nome = input('digite o nome:\n')
                     cpf = input('digite o cpf:\n')
                     senha = input('digite a senha:\n')
                     login.login_lista_cadastro(lista, nome , cpf, senha)
@@ -128,8 +130,5 @@ def main():
         elif opcao == '3':
             typing("Tenha um bom dia"),time.sleep(1)
             exit()
-
-        
-
         
 main()

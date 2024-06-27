@@ -18,3 +18,9 @@ def fas_typing(x):
         print(i, end = "")
         time.sleep(0.01)
     print()
+
+def slow_typing(x):
+    for i in x:
+        print(i, end = "")
+        time.sleep(1)
+    print()
