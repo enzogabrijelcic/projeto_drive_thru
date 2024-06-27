@@ -8,8 +8,41 @@ import login
 
 #cadastro1 = Cadastro('marcio', '658989', '1234')
 #cadastro2 = Cadastro('ze', '989', 'abc')
+#list_cadastro = [dados_castro]
 
 
+def ler_dados():
+    lista_usuarios = []
+    with open("projeto_drive_thru\dados_cadastro.txt",'r') as file:
+        lines = file.readlines()
+    for line in lines:
+        if line.startswith('Usuario '):
+            atributos = line.strip().split('Usuario: ')[1]
+            nome = atributos.split(':')[1].split(',')[0]
+            cpf = atributos.split(':')[2].split(',')[0]
+            senha = atributos.split(':')[3]
+            usuario1 = Usuario(nome,cpf, senha)
+            lista_usuarios.append(usuario1)
+    return lista_usuarios
+
+    
+  
+def salvar_dados(nome, cpf, senha):
+    with open('projeto_drive_thru\dados_cadastro.txt', 'a') as file:
+        
+        for nome1 in nome:
+            file.write(f'nome: {nome1}\n')
+        for cpf1 in cpf:
+            file.write(f'cpf: {cpf1}\n')
+        for senha1 in senha:
+            file.write(f'senha: {senha1}\n')
+       
+
+def adicionar_usuario(usuarios):
+    nome = input("Nome de usuário: ")
+    cpf = input('digite o cpf: ')
+    senha = input("Senha: ")
+    usuarios.append(Usuario(nome, cpf, senha))
 
 def pedido():
     while True:
@@ -56,6 +89,7 @@ def pedido():
                 typing("Invalido, reiniciando"),zzz()
 
 def main():
+    lista = ler_dados()
     
     #if not login(usuarios):
     #    print("Usuário ou senha incorretos.")
