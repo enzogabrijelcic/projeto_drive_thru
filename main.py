@@ -5,6 +5,7 @@ from formatação import *
 from forma_pagamento import *
 from usuario import Usuario
 import login
+from login import GerenciadorUsuarios
 
 #cadastro1 = Cadastro('marcio', '658989', '1234')
 #cadastro2 = Cadastro('ze', '989', 'abc')
@@ -13,7 +14,7 @@ import login
 
 def ler_dados():
     lista_usuarios = []
-    with open("projeto_drive_thru\dados_cadastro.txt",'r') as file:
+    with open("usuario.txt",'r') as file:
         lines = file.readlines()
     for line in lines:
         if line.startswith('Usuario '):
@@ -28,7 +29,7 @@ def ler_dados():
     
   
 def salvar_dados(nome, cpf, senha):
-    with open('projeto_drive_thru\dados_cadastro.txt', 'a') as file:
+    with open('usuario.txt', 'a') as file:
         
         for nome1 in nome:
             file.write(f'nome: {nome1}\n')
@@ -111,21 +112,36 @@ def main():
         if opcao == '1':
             pedido()
         elif opcao == '2':
-            escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
-            escolha = input('Voce possui Cadastro? [1] Sim [2] Não \n')
+           def menu():
+                gerenciador = GerenciadorUsuarios()
+    
+                while True:
+                    print("\nMenu:")
+                    print("1. Cadastrar usuário")
+                    print("2. Login")
+                    print("3. Sair")
+                    
+                    escolha = input("Escolha uma opção: ")
+                    
+                    if escolha == "1":
+                        nome = input("Digite seu nome: ")
+                        cpf = input("Digite seu CPF: ")
+                        senha = input("Digite a senha desejada: ")
+                        mensagem = gerenciador.cadastrar_usuario(nome, cpf, senha)
+                        print(mensagem)
+                    elif escolha == "2":
+                        cpf = input("Digite seu CPF: ")
+                        senha = input("Digite sua senha: ")
+                        mensagem = gerenciador.login(cpf, senha)
+                        print(mensagem)
+                    elif escolha == "3":
+                        print("Saindo...")
+                        break
+                    else:
+                        print("Opção inválida. Tente novamente.")
 
-            match escolha:
-                case '1':
-                    print('Voce selecionou efetuar Login')
-                    cpf = input('digite o cpf:\n')
-                    senha = input('digite a senha:\n')
-                    login.login_lista_cadastro(lista, nome , cpf, senha)
-
-                case '2':
-                    adicionar_usuario(lista)
-                    salvar_dados(nome, cpf,senha)
-                    print('Voce selecionou efetuar Cadastro')    
-
+    
+                menu()
 
         elif opcao == '3':
             typing("Tenha um bom dia"),time.sleep(1)
