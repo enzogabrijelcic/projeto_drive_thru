@@ -7,17 +7,12 @@ from usuario import Usuario
 import login
 from login import GerenciadorUsuarios
 
-#cadastro1 = Cadastro('marcio', '658989', '1234')
-#cadastro2 = Cadastro('ze', '989', 'abc')
-#list_cadastro = [dados_castro]
-
-
 def ler_dados():
     lista_usuarios = []
     with open("usuario.txt",'r') as file:
         lines = file.readlines()
     for line in lines:
-        if line.startswith('Usuario '):
+        if line.startswith('Usuario: '):
             atributos = line.strip().split('Usuario: ')[1]
             nome = atributos.split(':')[1].split(',')[0]
             cpf = atributos.split(':')[2].split(',')[0]
@@ -112,36 +107,36 @@ def main():
         if opcao == '1':
             pedido()
         elif opcao == '2':
-           def menu():
-                gerenciador = GerenciadorUsuarios()
+            
+            gerenciador = GerenciadorUsuarios()
     
-                while True:
-                    print("\nMenu:")
-                    print("1. Cadastrar usuário")
-                    print("2. Login")
-                    print("3. Sair")
-                    
-                    escolha = input("Escolha uma opção: ")
-                    
-                    if escolha == "1":
-                        nome = input("Digite seu nome: ")
-                        cpf = input("Digite seu CPF: ")
-                        senha = input("Digite a senha desejada: ")
-                        mensagem = gerenciador.cadastrar_usuario(nome, cpf, senha)
-                        print(mensagem)
-                    elif escolha == "2":
-                        cpf = input("Digite seu CPF: ")
-                        senha = input("Digite sua senha: ")
-                        mensagem = gerenciador.login(cpf, senha)
-                        print(mensagem)
-                    elif escolha == "3":
-                        print("Saindo...")
-                        break
-                    else:
-                        print("Opção inválida. Tente novamente.")
+            while True:
+                print("\nMenu:")
+                print("1. Cadastrar usuário")
+                print("2. Login")
+                print("3. Sair")
+                
+                escolha = input("Escolha uma opção: ")
+                
+                if escolha == "1":
+                    nome = input("Digite seu nome: ")
+                    cpf = input("Digite seu CPF: ")
+                    senha = input("Digite a senha desejada: ")
+                    mensagem = gerenciador.cadastrar_usuario(nome, cpf, senha)
+                    print(mensagem)
+                elif escolha == "2":
+                    cpf = input("Digite seu CPF: ")
+                    senha = input("Digite sua senha: ")
+                    mensagem = gerenciador.login(cpf, senha)
+                    print(mensagem)
+                elif escolha == "3":
+                    print("Saindo...")
+                    break
+                else:
+                    print("Opção inválida. Tente novamente.")
 
     
-                menu()
+               
 
         elif opcao == '3':
             typing("Tenha um bom dia"),time.sleep(1)
