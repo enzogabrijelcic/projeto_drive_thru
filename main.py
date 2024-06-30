@@ -125,10 +125,6 @@ def main():
                     break
                 else:
                     print("Opção inválida. Tente novamente.")
-
-    
-               
-
         elif opcao == '3':
             typing("Tenha um bom dia"),time.sleep(1)
             exit()
