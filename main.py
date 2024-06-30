@@ -6,7 +6,7 @@ from forma_pagamento import *
 from usuario import Usuario
 import login
 from login import GerenciadorUsuarios
-
+valor = 0
 def ler_dados():
     lista_usuarios = []
     with open("usuario.txt",'r') as file:
@@ -41,6 +41,7 @@ def adicionar_usuario(usuarios):
     usuarios.append(Usuario(nome, cpf, senha))
 
 def pedido():
+    global valor
     while True:
         typing("Selecione o que gostaria de comprar")
         print("\n[1] Hamburguer."),zzz()
@@ -53,15 +54,15 @@ def pedido():
         clear_console()
         match x:
             case "1":
-                hamburguers()
+                valor = hamburguers()
             case "2":
-                acompanhamentos()
+                valor = acompanhamentos()
             case "3":
-                bebidas()
+                valor = bebidas()
             case "4":
-                sobremesas()
+                valor = sobremesas()
             case "5":
-                combos()
+                valor = combos()
             case _:
                 print("Invalido"),time.sleep(2)
                 pedido()
@@ -77,8 +78,7 @@ def pedido():
             case "2":
                 verificar_carrinho()
             case "3":
-                forma_pagamento()
-                n_pedido = random.randrange(0,1000)
+                forma_pagamento(valor)
                 exit()
             case _:
                 typing("Invalido, reiniciando"),zzz()

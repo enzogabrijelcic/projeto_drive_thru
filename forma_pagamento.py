@@ -1,11 +1,9 @@
-from cardapio import pagamento
 from numero_pedido_sequencial import *
 import time
 from formatação import *
-pagamento = 0
 n_pedido = gerar_numero_pedido()
 
-def forma_pagamento():
+def forma_pagamento(valor):
     while True:
         forma_pag = typing('Qual a forma de pagamento?')
         print('1. Cartão \n2. Dinheiro \n3. pix\n4. Cancelar pedido')
@@ -18,8 +16,8 @@ def forma_pagamento():
 
         elif forma_pag == '2':
             dinheiro = float(input("Informe a quantia em dinheiro: R$ "))
-            if dinheiro >= pagamento:
-                troco = dinheiro - pagamento
+            if dinheiro >= valor:
+                troco = dinheiro - valor
                 print(f"Troco: R$ {troco:.2f}")
                 print('Seu pedido é nº:', n_pedido)
                 break

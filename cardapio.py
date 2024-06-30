@@ -34,25 +34,26 @@ def hamburguers():
     for produto in lista_produtos():
         if produto.tipo == "hamburguer":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")
-    atendimento("hamburguer")
+    return atendimento("hamburguer")
+    
 
 def acompanhamentos():
     for produto in lista_produtos():
         if produto.tipo == "acompanhamento":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")
-    atendimento("acompanhamento")
+    return atendimento("acompanhamento")
 
 def bebidas():
     for produto in lista_produtos():
         if produto.tipo == "bebida":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")   
-    atendimento("bebida")  
+    return atendimento("bebida")  
 
 def sobremesas(): 
     for produto in lista_produtos():
         if produto.tipo == "sobremesa":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
-    atendimento("sobremesa")
+    return atendimento("sobremesa")
 
 def combos(): 
     print("\nTodos os Combos acompanham fritas e bebida")
