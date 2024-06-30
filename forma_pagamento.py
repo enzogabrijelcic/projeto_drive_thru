@@ -1,13 +1,18 @@
 from cardapio import pagamento
 from numero_pedido_sequencial import *
+import time
+from formatação import *
+pagamento = 0
 n_pedido = gerar_numero_pedido()
 
 def forma_pagamento():
     while True:
-        forma_pag = input('Qual a forma de pagamento?\n1. Cartão \n2. Dinheiro \n3. Pix\n4. Cancelar pedido\nOpção: ')
-
+        forma_pag = typing('Qual a forma de pagamento?')
+        print('1. Cartão \n2. Dinheiro \n3. pix\n4. Cancelar pedido')
+        forma_pag = input()
         if forma_pag == '1':
             print("Pagamento confirmado com cartão.")
+            time.sleep(1)
             print('Seu pedido é nº:', n_pedido)
             break
 
@@ -22,9 +27,12 @@ def forma_pagamento():
                 print("Dinheiro insuficiente. Por favor, informe uma quantia suficiente.")
 
         elif forma_pag == '3':
-            print('Chave Pix: 2a1sd6a51sd6a1sd6a51s6da1s')
-            print('Pagamento confirmado via Pix.')
-            print('Seu pedido é nº:', n_pedido)
+            print('Pix Selecionado.')
+            time.sleep(1)
+            print('chave Pix:2a1sd6a51sd6a1sd6a51s6da1s')
+            time.sleep(3)
+            print("Processando pagamento",end = ""),slow_typing("...")
+            print('seu pedido é nº:', n_pedido)
             break
 
         elif forma_pag == '4':
@@ -33,3 +41,4 @@ def forma_pagamento():
 
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
+            forma_pagamento()
