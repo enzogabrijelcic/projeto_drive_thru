@@ -78,8 +78,6 @@ def pedido():
                 verificar_carrinho()
             case "3":
                 forma_pagamento()
-                n_pedido = random.randrange(0,1000)
-                forma_pagamento(n_pedido)
                 exit()
             case _:
                 typing("Invalido, reiniciando"),zzz()
