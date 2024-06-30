@@ -39,4 +39,4 @@ def forma_pagamento(valor):
 
         else:
             print("Opção inválida. Por favor, escolha uma opção válida.")
-            forma_pagamento()
+            forma_pagamento(valor)

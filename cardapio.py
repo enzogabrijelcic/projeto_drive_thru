@@ -60,9 +60,26 @@ def combos():
     for produto in lista_produtos():
         if produto.tipo == "combo":
             print(f"[{produto.id}] {produto.nome} - R${produto.valor}")    
-    atendimento("combo")
+    return atendimento("combo")
 
 def verificar_carrinho():
-    for i in carrinho:
-        print(i)
-    print(f"Total: R${pagamento}")
+    global pagamento
+    for index, i in enumerate(carrinho,1):
+        print(index,i)
+    print(f"Total: R${pagamento}\n")
+    typing("Gostaria de remover um item do carrinho?")
+    print("[1] Remover Item"),zzz()
+    print("[2] Voltar")
+    x = input("")
+    match x:
+        case "1":
+            y = input("Digite o numero do item que gostaria de remover: ")
+            pagamento -= int(carrinho[int(y)-1].split("R$")[1])
+            carrinho.pop(int(y)-1)
+        case "2":
+            pass
+        case _:
+            print("Input Inválido"),time.sleep(2)
+            clear_console()
+            verificar_carrinho()
+    return pagamento
